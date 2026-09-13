@@ -60,8 +60,8 @@ class PSBot(Player):
         }
 
 async def main(opponent_username: str):
-    bot = PSBot(account_configuration=AccountConfiguration("BattleLord69", "SOLGALEOandLunala99!"), battle_format="gen9randombattle", server_configuration=ShowdownServerConfiguration)
-    # print(f"Challenge has been sent to: @{opponent_username} by @BattleLord69.")
+    bot = PSBot(account_configuration=AccountConfiguration("username", "password"), battle_format="gen9randombattle", server_configuration=ShowdownServerConfiguration)
+    # print(f"Challenge has been sent to: @{opponent_username}.")
 
     await bot.send_challenges(opponent_username, n_challenges=1)
     # print(f"'send_challenges()' returned. Current battles: {list(bot.battles.keys())}", flush=True)
